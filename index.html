@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PHU Dobry Klimat - profesjonalne usługi hydrauliczne w Gliwicach. Kompleksowe usługi instalacyjne, naprawa i konserwacja instalacji wodno-kanalizacyjnych. Szybka pomoc hydrauliczna 24/7.">
+    <meta name="keywords" content="hydraulik Gliwice, usługi hydrauliczne, instalacje wodno-kanalizacyjne, naprawa hydrauliki, awarie hydrauliczne Gliwice, instalacje grzewcze">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="PHU Dobry Klimat - Profesjonalne Usługi Hydrauliczne w Gliwicach">
+    <meta property="og:description" content="Kompleksowe usługi hydrauliczne w Gliwicach. Instalacje, naprawy, konserwacja. Dostępność 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <title>PHU Dobry Klimat - Hydraulik Gliwice | Profesjonalne Usługi Hydrauliczne</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #006494;
+            --secondary-color: #13293D;
+            --accent-color: #247BA0;
+            --light-color: #E8F1F2;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: rgba(0, 100, 148, 0.95);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .hero {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url("banerd1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    color: white;
+    text-align: center;
+}
+
+@keyframes bannerChange {
+    0%, 33% {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('https://cdnjs.cloudflare.com/ajax/libs/pexels-images/1/plumbing-1.jpg');
+    }
+    34%, 66% {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('https://cdnjs.cloudflare.com/ajax/libs/pexels-images/1/plumbing-2.jpg');
+    }
+    67%, 100% {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('https://cdnjs.cloudflare.com/ajax/libs/pexels-images/1/plumbing-3.jpg');
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    margin-top: 60px; /* Add this to create space below the nav */
+}
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .about {
+            padding: 6rem 2rem;
+            background: var(--light-color);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card h3 {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+        .gallery {
+            padding: 6rem 2rem;
+            background: var(--light-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 1;
+            background: var(--primary-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section i {
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content {
+        margin-top: 80px; /* More space on mobile */
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem; /* Smaller font size on mobile */
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hamburger {
+            display: block;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <i class="fas fa-faucet"></i>
+                PHU Dobry Klimat Gliwice
+            </a>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#start">Start</a>
+                <a href="#about">O nas</a>
+                <a href="#services">Oferta</a>
+                <a href="#gallery">Zdjęcia</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="start" class="hero">
+        <div class="hero-content">
+            <h1>Profesjonalne Usługi Hydrauliczne w Gliwicach</h1>
+            <p>Kompleksowe rozwiązania hydrauliczne dla domu i firmy w Gliwicach i okolicach</p>
+            <a href="#contact" class="btn btn-primary">Zamów usługę</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>O nas</h2>
+                    <div class="about-text">
+                        <p>
+                            PHU Dobry Klimat to profesjonalna firma hydrauliczna działająca na terenie Gliwic i okolic. Od ponad 5 lat świadczymy najwyższej jakości usługi hydrauliczne, zapewniając naszym klientom niezawodne rozwiązania i profesjonalną obsługę.
+                        </p>
+                        <p>
+                            Nasz zespół składa się z wykwalifikowanych hydraulików z wieloletnim doświadczeniem. Używamy nowoczesnych narzędzi i technologii, aby zapewnić najwyższą jakość usług i trwałość wykonywanych instalacji.
+                        </p>
+                        <ul style="list-style: none; margin-top: 2rem;">
+                            <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>Dostępność 24/7 w przypadku awarii</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>Konkurencyjne ceny</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>Gwarancja na wykonane usługi</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>Profesjonalne doradztwo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/api/placeholder/600/400" alt="Hydraulik przy pracy" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+    <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 3rem;">Nasza Oferta</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Pogotowie Hydrauliczne</h3>
+            <p>Szybka pomoc w przypadku awarii hydraulicznych 24/7</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-shower"></i>
+            </div>
+            <h3>Biały Montaż</h3>
+            <p>Profesjonalny montaż umywalek, wanien, WC i innych elementów</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-fire"></i>
+            </div>
+            <h3>Instalacje CO</h3>
+            <p>Montaż i serwis instalacji centralnego ogrzewania</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-tint"></i>
+            </div>
+            <h3>Udrażnianie Rur</h3>
+            <p>Profesjonalne czyszczenie i udrażnianie kanalizacji</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-burn"></i>
+            </div>
+            <h3>Instalacja Gazowa</h3>
+            <p>Montaż i przeglądy instalacji gazowych</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-temperature-high"></i>
+            </div>
+            <h3>Ogrzewanie Podłogowe</h3>
+            <p>Montaż systemów ogrzewania podłogowego</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-water"></i>
+            </div>
+            <h3>Instalacja Wodna</h3>
+            <p>Kompleksowe instalacje i naprawy wodne</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h3>Montaż Pompy Ciepła</h3>
+            <p>Instalacja i serwis pomp ciepła</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-thermometer-half"></i>
+            </div>
+            <h3>Serwis Pieców i Kotłów</h3>
+            <p>Regularne przeglądy i naprawy systemów grzewczych</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h3>Projekty Instalacji</h3>
+            <p>Profesjonalne projekty instalacji sanitarnych</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-snowflake"></i>
+            </div>
+            <h3>Zamrażanie Rur</h3>
+            <p>Specjalistyczne usługi zamrażania rur</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-sink"></i>
+            </div>
+            <h3>Montaż Odpływów</h3>
+            <p>Instalacja odpływów liniowych i punktowych</p>
+        </div>
+    </div>
+</section>
+
+    <section id="gallery" class="gallery">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 3rem;">Nasze Realizacje</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 1 - Instalacja łazienkowa">
+            </div>
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 2 - Montaż grzejników">
+            </div>
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 3 - Instalacja wodna">
+            </div>
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 4 - Naprawa hydrauliczna">
+            </div>
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 5 - Montaż urządzeń">
+            </div>
+            <div class="gallery-item">
+                <img src="/api/placeholder/400/400" alt="Realizacja 6 - System grzewczy">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+                <p><i class="fas fa-map-marker-alt"></i> ul. Toszecka 101/114, 44-100 Gliwice</p>
+                <p><i class="fas fa-phone"></i> +48 533 446 782</p>
+                <p><i class="fas fa-envelope"></i> pwdobryklimat@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Pon-Pt: 8:00-18:00<br>Sob: 9:00-14:00</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.9602507564383!2d18.6717223!3d50.2944949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDE3JzQwLjIiTiAxOMKwNDAnMjIuNCJF!5e0!3m2!1spl!2spl!4v1625764245584!5m2!1spl!2spl" width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>PHU Dobry Klimat</h4>
+                <p>Profesjonalne usługi hydrauliczne w Gliwicach i okolicach</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Godziny otwarcia</h4>
+                <p>Poniedziałek - Piątek: 8:00 - 18:00</p>
+                <p>Sobota: 9:00 - 14:00</p>
+                <p>Niedziela: Zamknięte</p>
+            </div>
+            <div class="footer-section">
+                <h4>Szybki kontakt</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ul. Toszecka 101/114, 44-100 Gliwice</p>
+                <p><i class="fas fa-phone"></i> +48 533 446 782</p>
+                <p><i class="fas fa-envelope"></i> pwdobryklimat@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const nav = document.querySelector('nav');
+
+    // Hamburger menu functionality
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click from bubbling up
+        navLinks.classList.toggle('active');
+        hamburger.innerHTML = navLinks.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(0, 100, 148, 0.95)';
+            nav.style.padding = '0.5rem 1rem';
+        } else {
+            nav.style.background = 'rgba(0, 100, 148, 0.95)';
+            nav.style.padding = '1rem';
+        }
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply animations to elements
+    document.querySelectorAll('.service-card, .gallery-item, .about-content, .about-image').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
+    });
+});
+</script>
+</body>
+</html>
